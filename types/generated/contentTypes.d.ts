@@ -413,7 +413,7 @@ export interface ApiDrinkDrink extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Schema.Attribute.Required;
-    info: Schema.Attribute.RichText & Schema.Attribute.Required;
+    info: Schema.Attribute.RichText;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::drink.drink'> &
       Schema.Attribute.Private;
