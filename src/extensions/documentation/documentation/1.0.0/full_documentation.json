@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-10-05T12:41:21.565Z"
+    "x-generation-date": "2025-10-05T13:37:41.833Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -3844,9 +3844,19 @@
         ],
         "properties": {
           "data": {
+            "required": [
+              "title",
+              "slug"
+            ],
             "type": "object",
             "properties": {
               "Description": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "slug": {
                 "type": "string"
               },
               "locale": {
@@ -3907,6 +3917,10 @@
       },
       "Description": {
         "type": "object",
+        "required": [
+          "title",
+          "slug"
+        ],
         "properties": {
           "id": {
             "type": "number"
@@ -3915,6 +3929,12 @@
             "type": "string"
           },
           "Description": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "slug": {
             "type": "string"
           },
           "createdAt": {
@@ -4218,6 +4238,12 @@
                   "type": "string"
                 },
                 "Description": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "slug": {
                   "type": "string"
                 },
                 "createdAt": {
@@ -7341,9 +7367,15 @@
         ],
         "properties": {
           "data": {
+            "required": [
+              "slug"
+            ],
             "type": "object",
             "properties": {
               "Title": {
+                "type": "string"
+              },
+              "slug": {
                 "type": "string"
               },
               "locale": {
@@ -7404,6 +7436,9 @@
       },
       "Title": {
         "type": "object",
+        "required": [
+          "slug"
+        ],
         "properties": {
           "id": {
             "type": "number"
@@ -7412,6 +7447,9 @@
             "type": "string"
           },
           "Title": {
+            "type": "string"
+          },
+          "slug": {
             "type": "string"
           },
           "createdAt": {
@@ -7715,6 +7753,9 @@
                   "type": "string"
                 },
                 "Title": {
+                  "type": "string"
+                },
+                "slug": {
                   "type": "string"
                 },
                 "createdAt": {

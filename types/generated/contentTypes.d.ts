@@ -372,6 +372,7 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
 export interface ApiDescriptionDescription extends Struct.CollectionTypeSchema {
   collectionName: 'descriptions';
   info: {
+    description: '';
     displayName: 'Description';
     pluralName: 'descriptions';
     singularName: 'description';
@@ -391,6 +392,10 @@ export interface ApiDescriptionDescription extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -493,6 +498,7 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
 export interface ApiTitleTitle extends Struct.CollectionTypeSchema {
   collectionName: 'titles';
   info: {
+    description: '';
     displayName: 'Title';
     pluralName: 'titles';
     singularName: 'title';
@@ -508,6 +514,7 @@ export interface ApiTitleTitle extends Struct.CollectionTypeSchema {
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::title.title'> &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID<'Title'> & Schema.Attribute.Required;
     Title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
