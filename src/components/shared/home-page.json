@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_home_pages",
+  "info": {
+    "displayName": "homePage",
+    "icon": "house"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "default": "For studenter Av studenter"
+    },
+    "Description": {
+      "type": "text"
+    }
+  }
+}

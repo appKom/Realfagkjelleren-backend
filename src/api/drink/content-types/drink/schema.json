@@ -4,7 +4,11 @@
   "info": {
     "singularName": "drink",
     "pluralName": "drinks",
+<<<<<<< HEAD
     "displayName": "Drink"
+=======
+    "displayName": "drinks"
+>>>>>>> 5a44c4c (fix: fikset alt)
   },
   "options": {
     "draftAndPublish": true
@@ -16,8 +20,12 @@
       "required": true
     },
     "info": {
+<<<<<<< HEAD
       "type": "richtext",
       "required": true
+=======
+      "type": "richtext"
+>>>>>>> 5a44c4c (fix: fikset alt)
     },
     "image": {
       "allowedTypes": [
