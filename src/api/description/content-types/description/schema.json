@@ -4,7 +4,8 @@
   "info": {
     "singularName": "description",
     "pluralName": "descriptions",
-    "displayName": "Description"
+    "displayName": "Description",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -13,6 +14,16 @@
   "attributes": {
     "Description": {
       "type": "text"
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
     }
   }
 }
