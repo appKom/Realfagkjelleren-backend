@@ -405,6 +405,7 @@ export interface ApiDescriptionDescription extends Struct.CollectionTypeSchema {
 export interface ApiDrinkDrink extends Struct.CollectionTypeSchema {
   collectionName: 'drinks';
   info: {
+    description: '';
     displayName: 'Drink';
     pluralName: 'drinks';
     singularName: 'drink';
@@ -416,9 +417,9 @@ export interface ApiDrinkDrink extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Schema.Attribute.Required;
-    info: Schema.Attribute.RichText;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::drink.drink'> &
       Schema.Attribute.Private;
